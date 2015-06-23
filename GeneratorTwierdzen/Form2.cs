@@ -61,6 +61,37 @@ namespace GeneratorTwierdzen
             string[] teol2 = new string[] { "sumę trzech", "sumę dwóch", "iloczyn trzech", "iloraz dwóch", "macierz złożoną z", "różnicę dwóch" };
             string[] teol3 = new string[] { "liczb pierwszych", "liczb zespolonych", "liczb dwucyfrowych", "jedynek", "zer", "cukierków", "liczb kardynalnych", "liczb Fibonacciego"};
 
+           //Przygotowujemy indeksy, na podstawie których zostanie wygenerowane twierdzenie
+            int ktorakategoria = (imieliczba + nazwiskoliczba + promotorliczba + dzien + miesiac + rok) % kategoria.Length;
+            int icostam = (imieliczba * dzien + nazwiskoliczba + promotorliczba + miesiac) % costam.Length;
+            int zn = 0, z1 = 0, z2 = 0, z3 = 0;
+            switch (ktorakategoria)
+            {
+                case 0:
+                    zn = geomn.Length;
+                    z1 = geom1.Length;
+                    z2 = geom2.Length;
+                    z3 = geom3.Length;
+                    break;
+                case 1:
+                    zn = teoln.Length;
+                    z1 = teol1.Length;
+                    z2 = teol2.Length;
+                    z3 = teol3.Length;
+                    break;
+                case 2:
+                    zn = topon.Length;
+                    z1 = topo1.Length;
+                    z2 = topo2.Length;
+                    z3 = topo3.Length;
+                    break;
+            }
+            int iktostam1 = (miesiac * (rok + imieliczba) + promotorliczba) % zn;
+            int iktostam2 = (rok * (miesiac + dzien) + nazwiskoliczba) % zn;
+            int zdanie1 = (miesiac * imieliczba + promotorliczba + dzien) % z1;
+            int zdanie2 = (4 * dzien + nazwiskoliczba + 3*imieliczba) % z2;
+            int zdanie3 = (imieliczba + promotorliczba + nazwiskoliczba + miesiac * rok) % z3;
+
             Close();
         }
     }
