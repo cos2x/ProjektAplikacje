@@ -92,7 +92,30 @@ namespace GeneratorTwierdzen
             int zdanie2 = (4 * dzien + nazwiskoliczba + 3*imieliczba) % z2;
             int zdanie3 = (imieliczba + promotorliczba + nazwiskoliczba + miesiac * rok) % z3;
 
-            Close();
+            string zdanie = "";
+            string tytulzdania = "";
+            switch (ktorakategoria)
+            {
+                case 0:
+                    if (iktostam1 == iktostam2) tytulzdania = costam[icostam] + " " + geomn[iktostam1];
+                    else tytulzdania = costam[icostam] + " " + geomn[iktostam1] + "-" + geomn[iktostam2];
+                    zdanie = "Dla każdego " + geom1[zdanie1] + " istnieje " + geom2[zdanie2] + " " + geom3[zdanie3] + ".";
+                    break;
+                case 1:
+                    if (iktostam1 == iktostam2) tytulzdania = costam[icostam] + " " + teoln[iktostam1];
+                    else tytulzdania = costam[icostam] + " " + teoln[iktostam1] + "-" + teoln[iktostam2];
+                    zdanie = "Każdą liczbę " + teol1[zdanie1] + " można zapisać jako " + teol2[zdanie2] + " " + teol3[zdanie3] + ".";
+                    break;
+                case 2:
+                    if (iktostam1 == iktostam2) tytulzdania = costam[icostam] + " " + topon[iktostam1];
+                    else tytulzdania = costam[icostam] + " " + topon[iktostam1] + "-" + topon[iktostam2];
+                    zdanie = topo1[zdanie1] + " i " + topo2[zdanie2] + " " + topo3[zdanie3] + ".";
+                    break;
+            }
+            label6.Text = tytulzdania;
+            label7.Text = zdanie;
+
+            //Close();
         }
     }
 }
