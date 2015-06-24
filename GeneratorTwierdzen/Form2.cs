@@ -8,10 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+ 
+
 namespace GeneratorTwierdzen
 {
     public partial class Form2 : Form
     {
+        
+    
+        
         public Form2()
           
         {
@@ -19,6 +24,14 @@ namespace GeneratorTwierdzen
            
         }
 
+        public Form2(string i, string n, string p, DateTime du)
+        {
+            InitializeComponent();
+            limie.Text = i;
+            lnazwisko.Text = n;
+            lpromotor.Text = p;
+            ldata.Value = du;
+        }
        
         
 
@@ -32,7 +45,20 @@ namespace GeneratorTwierdzen
             int miesiac = ldata.Value.Month;
             int rok = ldata.Value.Year;
 
-            if (imie.Equals("") || nazwisko.Equals("") || nazwiskop.Equals("")) { label8.Text = "Uzupełnij wszystkie pola"; }
+            if (imie.Equals("") || nazwisko.Equals("") || nazwiskop.Equals("")) 
+           {if (label8.Text.Equals(""))
+                
+                
+                {label8.Text = "Uzupełnij wszystkie pola";}
+                else
+           {
+               if (label8.Text.Equals("Uzupełnij wszystkie pola!!!!!!!!!!!") || label8.Text.Equals("Uzupełnij wszystkie pola :("))
+               { label8.Text = "Uzupełnij wszystkie pola :("; }
+               else { label8.Text += "!"; }
+          
+            
+           }
+            }
 
             else
             {
@@ -52,6 +78,7 @@ namespace GeneratorTwierdzen
             {
                 promotorliczba += (int)nazwiskop[i];
             }
+          
 
             // wypisujemy wektory wyrażeń do generowanych zdań
             string[] kategoria = new string[] { "Geometria", "Teoria Liczb", "Topologia" };
@@ -130,7 +157,18 @@ namespace GeneratorTwierdzen
             Close();
             }
         }
-        public string tytul { get { return label7.Text; } }
-        public string twierdzenie { get { return label6.Text; } }
+        public string tytul {get {return label7.Text; }}
+        public string twierdzenie {get {return label6.Text; }}
+
+        public string fimie {get {return limie.Text; }}
+        public string fnazwisko {get {return lnazwisko.Text; }}
+        public string fpromotor {get {return lpromotor.Text; }}
+
+        public DateTime fdata { get {return ldata.Value; }}
+
+
+      
+
+
     }
 }
