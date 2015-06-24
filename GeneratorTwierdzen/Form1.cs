@@ -17,9 +17,16 @@ namespace GeneratorTwierdzen
         {
             InitializeComponent();
         }
+
+        string im = "";
+        string na = "";
+        string np = "";
+        DateTime da = DateTime.Now;
+
+
         private void button1_Click(object sender, EventArgs e)
         {
-            using (Form2 okno = new Form2())
+            using (Form2 okno = new Form2(im, na, np, da))
             {
                 okno.ShowDialog();
 
@@ -27,7 +34,12 @@ namespace GeneratorTwierdzen
                 {
                     tytul.Text = okno.tytul;
                     tresc.Text = okno.twierdzenie;
-                    button1.Text = "Wprowadź nowe dane";  
+                    button1.Text = "Edytuj dane";
+                    im = okno.fimie;
+                    na = okno.fnazwisko;
+                    np = okno.fpromotor;
+                    da = okno.fdata;
+
                 }
             }
         }
