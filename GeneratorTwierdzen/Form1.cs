@@ -23,8 +23,12 @@ namespace GeneratorTwierdzen
             {
                 okno.ShowDialog();
 
-                tytul.Text = okno.tytul;
-                tresc.Text = okno.twierdzenie;
+                if (!(okno.tytul.Equals("")))
+                {
+                    tytul.Text = okno.tytul;
+                    tresc.Text = okno.twierdzenie;
+                    button1.Text = "Wprowadź nowe dane";
+                }
             }
         }
 

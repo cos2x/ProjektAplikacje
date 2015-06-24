@@ -13,9 +13,15 @@ namespace GeneratorTwierdzen
     public partial class Form2 : Form
     {
         public Form2()
+          
         {
             InitializeComponent();
+           
         }
+
+       
+        
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -25,6 +31,11 @@ namespace GeneratorTwierdzen
             int dzien = ldata.Value.Day;
             int miesiac = ldata.Value.Month;
             int rok = ldata.Value.Year;
+
+            if (imie.Equals("") || nazwisko.Equals("") || nazwiskop.Equals("")) { label8.Text = "Uzupełnij wszystkie pola"; }
+
+            else
+            {
             // konwertujemy string na sumę liczb odpowiadających każdemu znakowi w ascii
             int imieliczba = 0;
             for (int i = 0; i < imie.Length; i++)
@@ -117,6 +128,7 @@ namespace GeneratorTwierdzen
 
              
             Close();
+            }
         }
         public string tytul { get { return label7.Text; } }
         public string twierdzenie { get { return label6.Text; } }
