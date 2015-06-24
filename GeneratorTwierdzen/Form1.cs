@@ -22,6 +22,9 @@ namespace GeneratorTwierdzen
             using (Form2 okno = new Form2())
             {
                 okno.ShowDialog();
+
+                tytul.Text = okno.tytul;
+                tresc.Text = okno.twierdzenie;
             }
         }
     }

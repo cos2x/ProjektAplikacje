@@ -115,7 +115,10 @@ namespace GeneratorTwierdzen
             label6.Text = tytulzdania;
             label7.Text = zdanie;
 
-            //Close();
+             
+            Close();
         }
+        public string tytul { get { return label7.Text; } }
+        public string twierdzenie { get { return label6.Text; } }
     }
 }

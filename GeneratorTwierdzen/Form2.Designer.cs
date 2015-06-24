@@ -133,21 +133,23 @@
             this.label6.Size = new System.Drawing.Size(35, 13);
             this.label6.TabIndex = 11;
             this.label6.Text = "label6";
+            this.label6.Visible = false;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(2, 297);
+            this.label7.Location = new System.Drawing.Point(33, 280);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(35, 13);
             this.label7.TabIndex = 12;
             this.label7.Text = "label7";
+            this.label7.Visible = false;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(276, 331);
+            this.ClientSize = new System.Drawing.Size(276, 301);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button1);

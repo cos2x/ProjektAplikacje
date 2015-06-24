@@ -30,6 +30,8 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.tytul = new System.Windows.Forms.Label();
+            this.tresc = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -52,11 +54,29 @@
             this.label1.Text = "Wypełnij prosty formularz i poznaj zagadnienie matematyczne, którego będzie dotyc" +
     "zyć Twoja praca magisterska!";
             // 
+            // tytul
+            // 
+            this.tytul.AutoSize = true;
+            this.tytul.Location = new System.Drawing.Point(158, 110);
+            this.tytul.Name = "tytul";
+            this.tytul.Size = new System.Drawing.Size(0, 13);
+            this.tytul.TabIndex = 2;
+            // 
+            // tresc
+            // 
+            this.tresc.AutoSize = true;
+            this.tresc.Location = new System.Drawing.Point(149, 127);
+            this.tresc.Name = "tresc";
+            this.tresc.Size = new System.Drawing.Size(0, 13);
+            this.tresc.TabIndex = 3;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(587, 179);
+            this.Controls.Add(this.tresc);
+            this.Controls.Add(this.tytul);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.MaximizeBox = false;
@@ -71,6 +91,8 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label tytul;
+        private System.Windows.Forms.Label tresc;
     }
 }
 
