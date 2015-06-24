@@ -87,7 +87,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Generator Twierdzeń";
+            this.Text = "Generator Twierdzeń (by Bartosz Kamedulski)";
             this.ResumeLayout(false);
             this.PerformLayout();
 
