@@ -27,5 +27,7 @@ namespace GeneratorTwierdzen
                 tresc.Text = okno.twierdzenie;
             }
         }
+
+ 
     }
 }
