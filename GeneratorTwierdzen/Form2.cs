@@ -52,7 +52,7 @@ namespace GeneratorTwierdzen
                 {label8.Text = "Uzupełnij wszystkie pola";}
                 else
            {
-               if (label8.Text.Equals("Uzupełnij wszystkie pola!!!!!!!!!!!") || label8.Text.Equals("Uzupełnij wszystkie pola :("))
+               if (label8.Text.Equals("Uzupełnij wszystkie pola!!!!!!!!!!!!!!!!!") || label8.Text.Equals("Uzupełnij wszystkie pola :("))
                { label8.Text = "Uzupełnij wszystkie pola :("; }
                else { label8.Text += "!"; }
           
